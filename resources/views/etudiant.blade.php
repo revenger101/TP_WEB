@@ -16,26 +16,21 @@
             <th>Numero</th>
             <th>Nom</th>
             <th>Prenom</th>
+            <th>Classe</th> 
             <th width="280px">Action</th>
         </tr>
+        @foreach ($liste as $value)
         <tr>
-            <td>1</td>
-            <td>Bouzaien</td>
-            <td>Malek</td>
+            <td>{{ $loop->index}}</td>
+            <td>{{ $value->nom }}</td>
+            <td>{{ $value->prenom }}</td>
+            <td>{{ $value->classe->libelle }}</td> 
             <td>
                 <a class="btn btn-info" href="#">Show</a>
                 <a class="btn btn-primary" href="#">Edit</a>
                 <a class="btn btn-danger" href="#">Delete</a>
             </td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Idoudi</td>
-            <td>Hechmi</td>
-            <td>
-                <a class="btn btn-info" href="#">Show</a>
-                <a class="btn btn-primary" href="#">Edit</a>
-                <a class="btn btn-danger" href="#">Delete</a>
-            </td>
-        </tr>
+        @endforeach
+    </table>
 @endsection
