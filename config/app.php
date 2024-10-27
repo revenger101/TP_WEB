@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
+
 return [
 
     /*
@@ -15,8 +16,11 @@ return [
     | any other location as required by the application or its packages.
     |
     */
-
+    App\Providers\FortifyServiceProvider::class,
     'name' => env('APP_NAME', 'Laravel'),
+
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -163,6 +167,7 @@ return [
         /*
          * Application Service Providers...
          */
+        App\Providers\FortifyServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
