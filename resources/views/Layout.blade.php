@@ -22,7 +22,7 @@
         <li class="md:mr-5 py-2 md:py-0"><a href="" class="hover:text-green-400"></a>Les Missions</li>
         <li class="md:mr-5 py-2 md:py-0"><a href="" class="hover:text-green-400"></a>Mes conversations</li>
         <li class="md:mr-5 py-2 md:py-0"><a href="" class="hover:text-green-400"></a>Mon compte</li>
-        <li class="md:mr-5 py-2 md:py-0"><a href="{{ route('layout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="hover:text-green-400">Se Deconnecter</a></li>
+        <li class="md:mr-5 py-2 md:py-0"><a href="{{ route('etudiant')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="hover:text-green-400">Se Deconnecter</a></li>
         <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display: none;">
             @csrf
         </form>
